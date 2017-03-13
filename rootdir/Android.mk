@@ -1,3 +1,4 @@
+#
 # Copyright (C) 2017 The Lineage Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,35 +12,14 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-# Inherit from scx35-common device configuration
-$(call inherit-product, device/samsung/scx35-common/common.mk)
+LOCAL_PATH := $(my-dir)
 
-# Inherit scx30g-common vendor tree
-$(call inherit-product-if-exists, vendor/samsung/scx30g-common/scx30g-common-vendor.mk)
-
-# Audio
-PRODUCT_PACKAGES += \
-	audio_hw.xml \
-	audio_para \
-	audio_policy.conf \
-	codec_pga.xml \
-	tiny_hw.xml
-
-# Bluetooth
-PRODUCT_PACKAGES += \
-	bt_vendor.conf
-
-# GPS
-PRODUCT_PACKAGES += \
-	gps.xml \
-
-# WiFi
-PRODUCT_PACKAGES += \
-	wpa_supplicant_ss.conf \
-	nvram_net.txt \
-	nvram_mfg.txt
-
-# Rootdir
-PRODUCT_PACKAGES += \
-	fstab.sc8830
+include $(CLEAR_VARS)
+LOCAL_MODULE := fstab.sc8830
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)
+LOCAL_SRC_FILES := $(LOCAL_MODULE)
+include $(BUILD_PREBUILT)
