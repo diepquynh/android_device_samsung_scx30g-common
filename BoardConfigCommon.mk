@@ -18,5 +18,8 @@
 # RIL
 BOARD_RIL_CLASS += ../../../device/samsung/scx30g-common/ril
 
+# Recovery
+TARGET_RECOVERY_FSTAB := device/samsung/scx30g2-common/rootdir/fstab.sc8830
+
 # System properties
 TARGET_SYSTEM_PROP += device/samsung/scx30g-common/system.prop
