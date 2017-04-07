@@ -36,7 +36,7 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-	wpa_supplicant_ss.conf \
+	wpa_supplicant.conf \
 	nvram_net.txt \
 	nvram_mfg.txt
 
