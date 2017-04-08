@@ -70,3 +70,6 @@ persist.sys.sprd.wcnreset=1
 fw.max_users=3
 fw.show_multiuserui=1
 
+# Media
+media.stagefright.legacyencoder=true
+media.stagefright.less-secure=true
