@@ -10,7 +10,7 @@
 <voip modem="w" pipe="/dev/spipe_w4" vbchannel="0" enable="1" />
 
 <i2s_for_btcall index="0"
-		switch="1"
+		switch="1" 
                 dst="external"
 		cp0_ctl_file="/proc/pin_switch/iis0_sys_sel/cp0_iis0"
 		cp1_ctl_file="/proc/pin_switch/iis0_sys_sel/cp1_iis0"
@@ -19,10 +19,11 @@
 		cp0_bt_ctl_file="/proc/pin_switch/bt_iis_sys_sel/cp0_iis0"
 		cp1_bt_ctl_file="/proc/pin_switch/bt_iis_sys_sel/cp1_iis0"
 		cp2_bt_ctl_file="/proc/pin_switch/bt_iis_sys_sel/cp2_iis0"
-		ap_bt_ctl_file="/proc/pin_switch/bt_iis_sys_sel/ap_iis0"
+ 		ap_bt_ctl_file="/proc/pin_switch/bt_iis_sys_sel/ap_iis0"
+	    bt_iis_con_eb ="/proc/pin_switch/bt_iis_con_eb"
 />
 
-<i2s_for_extspeaker index="1" switch="0" dst="external" cp0_ctl_file="/proc/pin_switch/iis-1" cp1_ctl_file="/proc/pin_switch/iis-1"  cp2_ctl_file="/proc/pin_switch/iis-1" ap_ctl_file="/proc/pin_switch/iis-1" />
+<i2s_for_extspeaker index="1" switch="0" dst="external" cp0_ctl_file="/d/pin_switch/iis-1" cp1_ctl_file="/d/pin_switch/iis-1"  cp2_ctl_file="/d/pin_switch/iis-1" ap_ctl_file="/d/pin_switch/iis-1" /> 
 
 <audiomode num="4">
 	<item name="Headset" index="0" />
@@ -44,7 +45,7 @@
 	<dump_record index="8" item_name ="record.dump0" dump_file_name ="dump_r0.pcm" switch="0" />
 	<dump_record index="9" item_name ="record.dump1" dump_file_name ="dump_r1.pcm" switch="0" />
 
-</dumpmusic>
+	</dumpmusic>
 </audio>
 
 
