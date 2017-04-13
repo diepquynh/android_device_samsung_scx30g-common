@@ -78,6 +78,19 @@ public class SC7730SRIL extends SamsungSPRDRIL implements CommandsInterface {
         }
     }
 
+    // This thing... it causes lots of headaches due to RIL crashes
+    @Override
+    public void
+    getHardwareConfig (Message result) {
+        riljLog("Ignoring call to 'getHardwareConfig'");
+        if (result != null) {
+            CommandException ex = new CommandException(
+                CommandException.Error.REQUEST_NOT_SUPPORTED);
+            AsyncResult.forMessage(result, null, ex);
+            result.sendToTarget();
+        }
+    }
+
     @Override
     protected Object
     responseCallList(Parcel p) {
