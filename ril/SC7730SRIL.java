@@ -65,15 +65,17 @@ public class SC7730SRIL extends SamsungSPRDRIL implements CommandsInterface {
 
     @Override
     public void setDataAllowed(boolean allowed, Message result) {
-        RILRequest rr = RILRequest.obtain(RIL_REQUEST_ALLOW_DATA, result);
-        if (RILJ_LOGD) {
-            riljLog(rr.serialString() + "> " + requestToString(rr.mRequest) +
-                    " allowed: " + allowed);
+        int simId = mInstanceId == null ? 0 : mInstanceId;
+        if (RILJ_LOGD) riljLog("setDataAllowed: allowed:" + allowed + " msg:" + result + " simId:" + simId);
+        if (allowed) {
+            invokeOemRilRequestRaw(new byte[] {(byte) 9, (byte) 4, (byte)(0 + simId)}, result);
+        } else {
+            if (result != null) {
+                // Fake the response since we are doing nothing to disallow mobile data
+                AsyncResult.forMessage(result, 0, null);
+                result.sendToTarget();
+            }
         }
-
-        rr.mParcel.writeInt(1);
-        rr.mParcel.writeInt(allowed ? 1 : 0);
-        send(rr);
     }
 
     @Override
