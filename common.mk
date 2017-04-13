@@ -20,10 +20,6 @@ $(call inherit-product-if-exists, vendor/samsung/scx30g-common/scx30g-common-ven
 
 # Audio
 PRODUCT_PACKAGES += \
-	audio_hw.xml \
-	audio_para \
-	audio_policy.conf \
-	codec_pga.xml \
 	tiny_hw.xml
 
 # Bluetooth
