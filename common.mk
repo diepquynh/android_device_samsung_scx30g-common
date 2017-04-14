@@ -18,10 +18,6 @@ $(call inherit-product, device/samsung/scx35-common/common.mk)
 # Inherit scx30g-common vendor tree
 $(call inherit-product-if-exists, vendor/samsung/scx30g-common/scx30g-common-vendor.mk)
 
-# Audio
-PRODUCT_PACKAGES += \
-	tiny_hw.xml
-
 # Bluetooth
 PRODUCT_PACKAGES += \
 	bt_vendor.conf
