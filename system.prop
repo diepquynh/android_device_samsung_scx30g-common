@@ -59,7 +59,6 @@ persist.sys.modem.diag=,gser
 sys.usb.gser.count=4
 ro.ril.hsxpa=1
 ro.ril.gprsclass=10
-persist.radio.multisim.config=dsds
 ro.telephony.ril_class=SC7730SRIL
 ro.telephony.ril.config=setPrefNwTypeOnUnsolConnected
 ro.telephony.ril.socket_name=rild,rild1,rild2
