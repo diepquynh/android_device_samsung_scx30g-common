@@ -27,11 +27,11 @@ import android.telephony.SubscriptionManager;
  *
  * @hide
  */
-public class core33gStrategies extends TelephonyStrategies {
+public class SC7730SStrategies extends TelephonyStrategies {
 
-    private static final String LOG_TAG = core33gStrategies.class.getSimpleName();
+    private static final String LOG_TAG = SC7730SStrategies.class.getSimpleName();
 
-    public core33gStrategies() { }
+    public SC7730SStrategies() { }
 
     @Override
     public void setTelephonyProperty(int phoneId, String property, String value) {
