@@ -67,6 +67,11 @@ ro.ril.telephony.mqanelements=6
 persist.sys.sprd.modemreset=0
 persist.sys.sprd.wcnreset=1
 
+# Multitasking
+ro.config.swappiness=130
+ro.config.zram.compressor=lz4
+ro.config.zram.disksize=512M
+
 # Multi-user UI
 fw.max_users=3
 fw.show_multiuserui=1
