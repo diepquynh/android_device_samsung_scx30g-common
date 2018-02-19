@@ -35,15 +35,6 @@
             <Quirk name="requires-allocate-on-output-ports" />
             <Quirk name="needs-flush-before-disable" />
         </MediaCodec>
-
-        <MediaCodec name="OMX.sprd.mp3.decoder">
-            <Type name="audio/mpeg" />
-            <Type name="audio/mpeg-L1" />
-            <Type name="audio/mpeg-L2" />
-        </MediaCodec>
-
-        <MediaCodec name="OMX.sprd.aac.decoder" type="audio/mp4a-latm" />
-
     </Decoders>
 
     <Encoders>
