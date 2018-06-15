@@ -1,3 +1,4 @@
+#
 # Copyright (C) 2017 The Lineage Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,17 +12,15 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-# Inherit from scx35-common device configuration
-$(call inherit-product, device/samsung/scx35-common/common.mk)
+LOCAL_PATH := $(my-dir)
 
-# Inherit scx30g-common vendor tree
-$(call inherit-product-if-exists, vendor/samsung/scx30g-common/scx30g-common-vendor.mk)
-
-# Rootdir
-PRODUCT_PACKAGES += \
-	fstab.sc8830
-
-# RIL
-PRODUCT_PACKAGES += \
-	rild.rc
+include $(CLEAR_VARS)
+LOCAL_MODULE := rild.rc
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_ETC)/init
+LOCAL_PROPRIETARY_MODULE := true
+LOCAL_SRC_FILES := $(LOCAL_MODULE)
+include $(BUILD_PREBUILT)

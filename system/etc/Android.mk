@@ -1,4 +1,6 @@
-# Copyright (C) 2017 The Lineage Project
+#
+# Copyright (C) 2016 The Android Open Source Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,17 +13,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-# Inherit from scx35-common device configuration
-$(call inherit-product, device/samsung/scx35-common/common.mk)
+LOCAL_PATH := $(call my-dir)
 
-# Inherit scx30g-common vendor tree
-$(call inherit-product-if-exists, vendor/samsung/scx30g-common/scx30g-common-vendor.mk)
-
-# Rootdir
-PRODUCT_PACKAGES += \
-	fstab.sc8830
-
-# RIL
-PRODUCT_PACKAGES += \
-	rild.rc
+include $(call all-makefiles-under,$(LOCAL_PATH))
