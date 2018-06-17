@@ -23,5 +23,6 @@ PRODUCT_PACKAGES += \
 	fstab.sc8830
 
 # RIL
-PRODUCT_PACKAGES += \
-	rild.rc
+PRODUCT_COPY_FILES += \
+	device/samsung/scx30g-common/system/etc/init/rild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rild.rc
+
