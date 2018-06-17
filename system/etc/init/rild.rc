@@ -4,7 +4,6 @@ service ril-daemon /vendor/bin/hw/rild -c 1 -- -m w -n 0
     disabled
     user root
     group radio cache inet misc audio log readproc wakelock shell
-    setenv LD_PRELOAD /system/lib/libril_shim.so
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 service ril-daemon2 /vendor/bin/hw/rild -c 2 -- -m w -n 1
@@ -12,7 +11,6 @@ service ril-daemon2 /vendor/bin/hw/rild -c 2 -- -m w -n 1
     disabled
     user root
     group radio cache inet misc audio log readproc wakelock shell
-    setenv LD_PRELOAD /system/lib/libril_shim.so
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 service ril-daemon3 /vendor/bin/hw/rild -c 3 -- -m w -n 2
@@ -20,5 +18,4 @@ service ril-daemon3 /vendor/bin/hw/rild -c 3 -- -m w -n 2
     disabled
     user root
     group radio cache inet misc audio log readproc wakelock shell
-    setenv LD_PRELOAD /system/lib/libril_shim.so
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
