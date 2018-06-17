@@ -15,9 +15,6 @@
 # Inherit from SCX35 common configs
 -include device/samsung/scx35-common/BoardConfigCommon.mk
 
-# RIL
-BOARD_RIL_CLASS += ../../../device/samsung/scx30g-common/ril
-
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/scx30g-common/rootdir/fstab.sc8830
 
