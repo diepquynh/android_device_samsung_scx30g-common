@@ -21,8 +21,3 @@ $(call inherit-product-if-exists, vendor/samsung/scx30g-common/scx30g-common-ven
 # Rootdir
 PRODUCT_PACKAGES += \
 	fstab.sc8830
-
-# RIL
-PRODUCT_COPY_FILES += \
-	device/samsung/scx30g-common/system/etc/init/rild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rild.rc
-

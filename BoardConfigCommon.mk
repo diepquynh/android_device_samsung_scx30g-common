@@ -20,11 +20,3 @@ TARGET_RECOVERY_FSTAB := device/samsung/scx30g-common/rootdir/fstab.sc8830
 
 # System properties
 TARGET_SYSTEM_PROP += device/samsung/scx30g-common/system.prop
-
-# RIL
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/scx30g-common/include
-SIM_COUNT := 2
-
-# RIL shim
-TARGET_LD_SHIM_LIBS += \
-	/system/vendor/lib/libreference-ril_sp.so|libril_shim.so
